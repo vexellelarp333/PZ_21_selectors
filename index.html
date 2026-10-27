@@ -21,9 +21,11 @@
           <p>Этот блок имеет дополнительный класс.</p>
           <a href="#">Читать</a>
         </article>
-        <form class="filter">
-          <label>Поиск<input type="text" name="search" /></label
-          ><label><input type="checkbox" name="only" /> Только избранное</label>
+        
+          <form class="filter">
+            <label for="search-input">Поиск</label>
+            <input type="text" id="search-input" name="search" required />
+            <label><input type="checkbox" name="only" /> Только избранное</label>          
         </form>
       </section>
     </main>

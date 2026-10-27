@@ -1,6 +1,116 @@
-* , *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; min-width: 320px; font-family: Arial, sans-serif; color: #171717; background: #f5f4ef; }
-a { color: inherit; }
-button, input, textarea, select { font: inherit; }
-body{padding:48px}.page{max-width:900px;margin:0 auto}.card{margin-top:24px;padding:24px;border:1px solid #aaa;background:#fff}.card h2{color:#171717}.card .hint{color:#6c5ce7}.filter{display:grid;gap:16px;margin-top:40px;padding:24px;background:#d8ff55}/* TODO combinators, attributes, :not/:is/:has */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    font-family: Arial, sans-serif;
+    color: #171717;
+    background: #f5f4ef;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+body {
+    padding: 48px
+}
+
+.page {
+    max-width: 900px;
+    margin: 0 auto
+}
+
+.card {
+    margin-top: 24px;
+    padding: 24px;
+    border: 1px solid #aaa;
+    background: #fff
+}
+
+.card > h2 {
+    color: #171717
+}
+
+.card .hint {
+    color: hsl(221, 31%, 50%)
+}
+
+.filter {
+    display: grid;
+    gap: 16px;
+    margin-top: 40px;
+    padding: 24px;
+    background: hsl(221, 31%, 50%);
+}
+
+.content > h1 {
+  color: hsl(221, 31%, 50%);
+}
+
+
+label + input {
+  margin-left: 10px;
+}
+
+input[required] {
+  background-color: #fff9f9;
+}
+
+article:is(.card, .card--featured) {
+  padding: 20px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+.card--featured {
+  border-color: #007bff;
+  background-color: #f0f7ff;
+}
+
+
+.card p:not(.hint) {
+  color: #333333;
+  line-height: 1.6;
+}
+
+
+.card .hint {
+  color: #666666;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+
+.card:has(a:hover) {
+  border-color: #28a745;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.filter {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+}
